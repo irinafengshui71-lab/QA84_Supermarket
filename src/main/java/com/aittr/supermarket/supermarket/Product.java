@@ -13,9 +13,9 @@ public class Product implements Comparable<Product>{
     @Override
     public String toString() {
         String str = "Name: " + name
-                +"Code: " + code
-                + "Price: " + price
-                + "Unit: " + unit +
+                +" Code: " + code
+                + " Price: " + price
+                + " Unit: " + unit +
                 "\nQuantity: " + quantity;
         return str;
     }
@@ -75,10 +75,19 @@ public class Product implements Comparable<Product>{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o; // kasting object
-        return code == product.code;
+  public boolean equals(Object obj) {
+
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (this.getClass() != obj.getClass())
+            return false;
+        Product other = (Product) obj;
+        return this.code == other.code;
+
+
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Product product = (Product) o; // kasting object
+//        return code == product.code;
     }
 
 
