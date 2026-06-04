@@ -17,7 +17,7 @@ public class MainSupermarket {
         Product p11 = new Product("Potato ", 111, "kg", 6.80);
         Product p12 = new Product( "Potato ", 111, "kg", 7.80 );
 
-        Supermarket lidl = new Supermarket("WalMart", "Burger 10, Schwäbisch Hall");
+        Supermarket lidl = new Supermarket("WalMart", "Burger 10, Schwaebisch Hall");
         lidl.addProduct(p10, 24);
         lidl.addProduct(p9, 48);
         lidl.addProduct(p8,30);
@@ -30,21 +30,27 @@ public class MainSupermarket {
         lidl.addProduct(p1,15);
         lidl.addProduct(p11, 100);
         lidl.addProduct(p12, 20);
+//        lidl.printProducts();
+//        lidl.printProducts();
+//        lidl.removeProduct(111,8);
+//        lidl.printProducts();
+//        lidl.reducePrice(111, 50);
+//        lidl.sortProductsBy(ISortingCriteria.SORT_BY_PRICE);
+//        lidl.printProducts();
+//        lidl.sortProductsBy(ISortingCriteria.SORT_BY_CODE_REVERSE);
+//        lidl.printProducts();
+//        lidl.sortProductsBy(ISortingCriteria.SORT_BY_NAME_REVERSE);
+//        lidl.printProducts();
+        lidl.findProduct(106);
         lidl.printProducts();
-        lidl.printProducts();
-        lidl.removeProduct(111,8);
-        lidl.printProducts();
-        lidl.reducePrice(111, 50);
-        lidl.sortProductsBy(ISortingCriteria.SORT_BY_PRICE);
-        lidl.printProducts();
-        lidl.sortProductsBy(ISortingCriteria.SORT_BY_CODE_REVERSE);
-        lidl.printProducts();
-        lidl.sortProductsBy(ISortingCriteria.SORT_BY_NAME_REVERSE);
+        lidl.removeProductFromStock(106);
+        lidl.reducePriceForAll(20);
         lidl.printProducts();
 
 
     }
 }
+
 /*
 product
 ----------
@@ -77,12 +83,31 @@ reducePrice(code, percent)
 totalCost()                     VVVVVV
 reducePriceAll(percent)
 
+
+
+
+
+
+
+
+
+
 HW* 14
 1. public void findProduct(int code)
 
  2.public void removeProductFromStock(int code)
 
 3.public void reducePriceForAll(percent)
+
+
+
+
+
+
+
+
+
+
 
   4.advanced *****
    public double totalCost()
